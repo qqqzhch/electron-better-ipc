@@ -5,7 +5,7 @@ const util = require('./util');
 const {ipcRenderer: ipc} = electron;
 
 ipc.callMain = (channel, data) => new Promise((resolve, reject) => {
-	const {sendChannel, dataChannel, errorChannel} = util.getResponseChannels(channel);
+	const {sendChannel, dataChannel, errorChannel} = util.getResponseChannels(channel,data);
 
 	const cleanup = () => {
 		ipc.removeAllListeners(dataChannel);

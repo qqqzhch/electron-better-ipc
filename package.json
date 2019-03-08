@@ -44,5 +44,8 @@
 			"node",
 			"browser"
 		]
+	},
+	"dependencies": {
+		"hash-sum": "^1.0.2"
 	}
 }
